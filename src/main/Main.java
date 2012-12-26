@@ -1,11 +1,12 @@
 /**
  * 
  */
-package com.waitonza.grade_noti.main;
+package main;
 
 import java.util.Scanner;
 
-import com.waitonza.grade_noti.parser.KUGradeParser;
+import parser.KUGradeParser;
+
 
 /**
  * KU Grade Notification
@@ -23,12 +24,14 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("KU Grade Notification By WaiTonZa ");
+		System.out.println("ทดสอบ");
 		System.out.println("Note : It won't show grade. See grade with yourself.");
 		System.out.print("Username : ");
 		String username = scanner.nextLine();
 		System.out.print("Password : ");
 		String password = scanner.nextLine();
 		KUGradeParser parser = new KUGradeParser(username, password);
+		parser.parse();
 	}
 
 }
