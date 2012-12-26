@@ -24,14 +24,17 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("KU Grade Notification By WaiTonZa ");
-		System.out.println("ทดสอบ");
-		System.out.println("Note : It won't show grade. See grade with yourself.");
+		System.out.print("Select mode [S -> Show grade and notify, N -> notify only] : ");
+		String mode = scanner.nextLine().toLowerCase();
+		if (mode.equals("n")) {
+			System.out.println("Note : It won't show grade. See grade with yourself.");
+		}
 		System.out.print("Username : ");
 		String username = scanner.nextLine();
 		System.out.print("Password : ");
 		String password = scanner.nextLine();
 		KUGradeParser parser = new KUGradeParser(username, password);
-		parser.parse();
+		parser.parse(mode);
 	}
 
 }
