@@ -78,6 +78,11 @@ public class KUGradeParser {
 			System.out.println("Login successful.");
 			System.out.println("**** Note : You can keep open application away for notify!! ****");
 			System.out.println("**** Note : This application will update infomation in every 30 second!! ****");
+			System.out.println("------------------------------------------------------------------------------------");
+			System.out.println("Last grade info!");
+			System.out.println("------------------------------------------------------------------------------------");
+			parse();
+			showGrade();
 			this.isOnline = true;
 		}
 		
@@ -129,7 +134,6 @@ public class KUGradeParser {
 			}
 			playSound("http://www.burninglotus.com/dogtoys/sounds/dtbeeper.wav");
 			playSound("http://www.burninglotus.com/dogtoys/sounds/dtbeeper.wav");
-			playSound("http://www.burninglotus.com/dogtoys/sounds/dtbeeper.wav");
 		}
 	}
 	
@@ -156,6 +160,7 @@ public class KUGradeParser {
 			String print_format = "%s %s %"+ indent_width +"s\n";
 			System.out.printf(print_format,node.getId(),node.getName(),node.getGrade());
 		}
+		System.out.println("------------------------------------------------------------------------------------");
 	}
 	
 	 public void run() {

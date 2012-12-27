@@ -1,4 +1,29 @@
-KU-GradeNotification
+Kasetsart University Grade Notification (Command Line)
 ====================
 
-Grade Notification of Kasetsert University [Opensource] (JAVA)
+### จุดประสงค์ : ใช้โปรแกรมแจ้งเตือน ผลเกรด ที่ออกมาใหม่ โดยไม่ต้องเข้าเว็บ ดูเกรดของ ม.เกษตร ลดการเข้าดูเว็บด้วยตัวเองบ่อยๆจนเกินไป จนไม่ได้ทำอะไร -w-
+
+### ความต้องการขั้นต่ำ : java 6 หรือ java 7
+
+วิธีใช้งาน :
+--------------------
+
+1.) [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta1.zip) ก่อนเลย แล้วแตกไฟล์
+2.) ถ้าใช้ mac ให้ เปิด Terminal แล้ว cd (เปลี่ยน folder) ไปที่ folder ของโปรแกรม แล้วพิมพ์
+	./gku-mac
+
+	ถ้าใช้ Windows ให้เปิดจาก gku-win-java6.bat / gku-win-java7.bat ตาม Version ของ Java ในเครื่อง
+
+3.) เข้ามาในโปรแกรมแล้วจะมีให้เลือก 2 โหมด 1.) แจ้งผลเกรด เมื่อเกรดตัวใหม่ออก [rb,2.) แจ้งเมื่อเกรดตัวใหม่ออกมาอย่างเดียว ไม่แจ้งผล
+4.) ใส่ Username / Password
+5.) โปรแกรมจะโชว์ผลเกรดล่าสุดออกมา แล้วโปรแกรมจะทำการดึงข้อมูล มาทุกๆ 30 วินาที มาตรวจสอบ
+[!(http://cakephp.org/img/cake-logo.png)]
+6.) เมื่อเกรดใหม่ออกมา จะแจ้งเตือนด้วย เสียงประมาณ 6 วินาที แล้วจะแสดงผลออกมา จากนั้นโปรแกรมจะหยุดทำงาน
+[!(http://cakephp.org/img/cake-logo.png)]
+
+ถ้าหากรันไม่ได้ ให้เปืด Command Line/Terminal แล้ว cd (เปลี่ยน folder) ไปโฟรเดอร์ของโปรแกรม
+	java -jar KUGradeNotify-Beta1.jar
+
+Know Bug Issue
+--------------------
+- Windows จะมีปัญหาเรื่องการแสดงผลภาษาไทย ใน command line (แก้ไม่ได้ นอกจากทำ version GUI)
