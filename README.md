@@ -1,4 +1,4 @@
-Kasetsart University Grade Notification (Command Line)
+Kasetsart University Grade Notification (Command Line Interface)
 ====================
 
 ### จุดประสงค์ : 
@@ -9,12 +9,22 @@ Kasetsart University Grade Notification (Command Line)
 
 Java 6 หรือ Java 7
 
+Version Log :
+--------------------
+
+### Version Beta2 [16/03/2013] [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta2.zip)
+- เพื่มการรองรับ การเลือกหลายวิทยาเขต (บางเขน, กำแพงแสน)
+- ปรับรูปแบบการแสดงผลใหม่
+
+### Version Beta1 [28/12/2012] [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta1.zip)
+- โปรแกรมถูกปล่อยครั้งแรก
+
 วิธีใช้งาน :
 --------------------
 
-1.) [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta1.zip) ก่อนเลย แล้วแตกไฟล์
+1.) [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta2.zip) ก่อนเลย แล้วแตกไฟล์
 
-2.) ถ้าใช้ mac ให้ เปิด Terminal แล้ว cd (เปลี่ยน folder) ไปที่ folder ของโปรแกรม แล้วพิมพ์
+2.) ถ้าใช้ mac หรือ linux ให้ เปิด Terminal แล้ว cd (เปลี่ยน folder) ไปที่ folder ของโปรแกรม แล้วพิมพ์
 	
 	./gku-mac
 
@@ -22,7 +32,7 @@ Java 6 หรือ Java 7
 
 3.) เข้ามาในโปรแกรมแล้วจะมีให้เลือก 2 โหมด 1.) แจ้งผลเกรด เมื่อเกรดตัวใหม่ออก [พิมพ์ S หรือ s] 2.) แจ้งเมื่อเกรดตัวใหม่ออกมาอย่างเดียว ไม่แจ้งผล [พิมพ์ N หรือ n]
 
-4.) ใส่ Username / Password
+4.) ใส่ Username / Password / วิทยาเขต
 
 5.) โปรแกรมจะโชว์ผลเกรดล่าสุดออกมา แล้วโปรแกรมจะทำการดึงข้อมูล มาทุกๆ 30 วินาที มาตรวจสอบ [สามารถเปิดทิ้งไว้ตลอดเวลาได้]
 

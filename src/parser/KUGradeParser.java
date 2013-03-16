@@ -32,6 +32,7 @@ public class KUGradeParser {
 	private String username;
 	private String password;
 	private String mode = "";
+	private String zone = "";
 	
 	private String yourname;
 	private String sessionId;
@@ -42,15 +43,17 @@ public class KUGradeParser {
 	private Response res = null;
 	private Document doc = null;
 	private boolean isOnline;
+	private boolean isFirstRun;
 	
 	public KUGradeParser() {
 		
 	}
 	
-	public KUGradeParser(String username, String password, String mode) {
+	public KUGradeParser(String username, String password, String mode, String zone) {
 		this.username = username;
 		this.password = password;
 		this.mode = mode;
+		this.zone = zone;
 		this.old_courseList = new ArrayList<CourseNode>();
 		this.current_courseList = new ArrayList<CourseNode>();
 		login();
@@ -62,7 +65,7 @@ public class KUGradeParser {
 		try {
 			res = Jsoup.connect(link)
 					.method(Method.POST)
-					.data("UserName", this.username, "Password", this.password, "zone", "0")
+					.data("UserName", this.username, "Password", this.password, "zone", this.zone)
 					.timeout(1000*60).execute();
 			doc = res.parse();
 			doc.outputSettings().charset("TIS-620");
@@ -78,9 +81,10 @@ public class KUGradeParser {
 			System.out.println("Login successful.");
 			System.out.println("**** Note : You can keep open application away for notify!! ****");
 			System.out.println("**** Note : This application will update infomation in every 30 second!! ****");
-			System.out.println("------------------------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------------");
 			System.out.println("Last grade info!");
-			System.out.println("------------------------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------------");
+			this.isFirstRun = true;
 			parse();
 			showGrade();
 			this.isOnline = true;
@@ -124,7 +128,8 @@ public class KUGradeParser {
 			current_courseList.add(node);
 		}
 		last_update_date = new Date();
-		System.out.println("@[ " + last_update_date +" ]" + " Update new data");
+		if(!isFirstRun)
+			System.out.println("@[ " + last_update_date +" ]" + " Update new data");
 		if(checkNotify()) {
 			isOnline = false;
 			if(this.mode.equals("s")) {
@@ -135,6 +140,7 @@ public class KUGradeParser {
 			playSound("http://www.burninglotus.com/dogtoys/sounds/dtbeeper.wav");
 			playSound("http://www.burninglotus.com/dogtoys/sounds/dtbeeper.wav");
 		}
+		this.isFirstRun = false;
 	}
 	
 	private boolean checkNotify() {
@@ -153,14 +159,14 @@ public class KUGradeParser {
 		System.out.println();
 		System.out.println("Your ID/Name : " + this.yourname);
 		System.out.println("Last update time result : " + this.last_update_date);
-		System.out.println("------------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------------------------");
 		for (CourseNode node : current_courseList) {
 			int namelen = node.getName().length();
 			int indent_width = 60 - namelen;
 			String print_format = "%s %s %"+ indent_width +"s\n";
 			System.out.printf(print_format,node.getId(),node.getName(),node.getGrade());
 		}
-		System.out.println("------------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------------------------");
 	}
 	
 	 public void run() {
