@@ -9,7 +9,7 @@ Kasetsart University Grade Notification (Command Line Interface)
 
 Java 6 หรือ Java 7
 
-Version Log :
+Progarm Version Log :
 --------------------
 
 ### Version Beta2 [16/03/2013] [Download](https://dl.dropbox.com/u/24254026/ku-grade/Jar/KUGradeNotify-Beta2.zip)
