@@ -7,7 +7,7 @@ Kasetsart University Grade Notification (Command Line Interface)
 
 ### ความต้องการขั้นต่ำ : 
 
-Java 6 หรือ Java 7
+Java 7
 
 ติดตั้งจาก [Download](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html)
 
@@ -30,7 +30,7 @@ Progarm Version Log :
 	
 	./gku-mac
 
-ถ้าใช้ Windows ให้เปิดจาก gku-win-java6.bat / gku-win-java7.bat ตาม Version ของ Java ในเครื่อง
+ถ้าใช้ Windows ให้เปิดจาก gku-win-java7.bat
 
 3.) เข้ามาในโปรแกรมแล้วจะมีให้เลือก 2 โหมด 1.) แจ้งผลเกรด เมื่อเกรดตัวใหม่ออก [พิมพ์ S หรือ s] 2.) แจ้งเมื่อเกรดตัวใหม่ออกมาอย่างเดียว ไม่แจ้งผล [พิมพ์ N หรือ n]
 
