@@ -9,6 +9,8 @@ Kasetsart University Grade Notification (Command Line Interface)
 
 Java 6 หรือ Java 7
 
+ติดตั้งจาก [Download](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html)
+
 Progarm Version Log :
 --------------------
 
